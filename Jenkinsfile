@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git url: 'https://github.com/Chiranthan117/devop1.git',
+                git url: 'https://github.com/Chiranthan117/dev.git',
                     branch: 'main'
             }
         }
@@ -17,5 +17,11 @@ pipeline {
             }
         }
 
+        stage('Run Python File') {
+            steps {
+                sh 'python3 hello.py'
+            }
+        }
+
     }
-}	
+}
